@@ -8,6 +8,7 @@
                 <li class="tabs"><a href="adminBooking.php">Booking</a></li>
                 <li class="tabs"><a href="adminHotel.php">Hotel</a></li>
                 <li class="tabs current"><a href="adminUser.php">Users</a></li>
+                <li class="tabs"><a href="newlyAdded.php">Newly Added</a></li>
             </div>
         </div>
         <div class="profileContent admin">

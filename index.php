@@ -1,85 +1,5 @@
 
-<?php
-  session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-     
-      <title>Book My Hotel</title>
-      
-
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/responsive.css">
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-       
-       
-       
-   </head>
- 
-   <body class="main-layout">
-   
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
-
-      <header>
-        
-         <div class="header">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo">
-                               <a href="index.php">BookMyHotel</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
-                              <li class="nav-item">
-                                 <a class="nav-link" href="index.php">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="categories.php">Categories</a>
-                              </li>
-                                <li class="nav-item">
-                                 <a class="nav-link" href="discount.php">Discounts</a>
-                              </li>
-                           </ul>
-                           <?php
-                           if (isset($_SESSION["firstName"])) {
-                              echo ('<div class="sign_btn"><a href ="includes/profile.inc.php?header=true">Profile</a></div>');
-                              echo ('<div class="sign_btn"><a href="includes/logout.inc.php">Logout</a></div>');
-                           } else {
-                              echo ('<div class="sign_btn"><a href="signup.php">Sign in</a></div>');
-                              echo ('<div class="sign_btn"><a href="login.php">Login</a></div>');
-                           }
-                           ?>
-                        </div>
-                     </nav>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
+      <?php include_once 'headerMain.php'; ?>
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
@@ -183,85 +103,94 @@
       </div>
       <!-- end about -->
        
-    <div class="discounts">
+   <div class="discounts">
        
-        <h1><b>Discounts</b></h1>
-        
-        <br>
-   
-        
-        <div class="polaroid" style="position: absolute; left: 500px;">
-            <a href="hotelPage.php?hotelName=Hotel%20Sangrila"> <img src="images/san.jpg" alt="5 Terre" > </a>
-  <div class="container">
-  <h2 class="dishotels">Hotel Sangrila</h2>
-      <img src="images/star.png" alt="5 Terre" width="100px" >
-      <hr>
-      <h3 class="dishotels">AU$210</h3>
-  </div>
-</div>
-       
-           <div class="polaroid" style="position: absolute; left: 950px;">
-               <a href="hotelPage.php?hotelName=Hotel%20Pokhara"><img src="images/poke.JPG" alt="5 Terre" ></a>
-  <div class="container">
-  <h2 class="dishotels">Hotel Pokhara</h2>
-      <img src="images/star.png" alt="5 Terre" width="100px" >
-      <hr>
-      <h3 class="dishotels">AU$190</h3>
-  </div>
-</div>
-        
-        
-           <div class="polaroid">
-  <a href="hotelPage.php?hotelName=Hotel%20Tepu"> <img src="images/tepu.JPG" alt="5 Terre" ></a>
-  <div class="container">
-  <h2 class="dishotels">Hotel Tepu</h2>
-      <img src="images/star.png" alt="5 Terre" width="100px" >
-      <hr>
-      <h3 class="dishotels">AU$240</h3>
-  </div>
-</div>
+      <h1><b>Discounts</b></h1>
       
-       </div>
+      <br>
+      
+      <div class="container-fluid">
+         <div class="row">
+               <div class="col-md-4">
+               <div class="polaroid">
+                  <a href="hotelPage.php?hotelName=Hotel%20Sangrila"> <img src="images/san.jpg" alt="5 Terre" > </a>
+                  <div class="container">
+                  <h2 class="dishotels">Hotel Sangrila</h2>
+                     <img src="images/star.png" alt="5 Terre" width="100px" >
+                     <hr>
+                     <h3 class="dishotels">AU$210</h3>
+                  </div>
+               </div>
+               </div>
+               <div class="col-md-4">
+               <div class="polaroid" >
+                  <a href="hotelPage.php?hotelName=Hotel%20Pokhara"><img src="images/poke.JPG" alt="5 Terre" ></a>
+                  <div class="container">
+                  <h2 class="dishotels">Hotel Pokhara</h2>
+                     <img src="images/star.png" alt="5 Terre" width="100px" >
+                     <hr>
+                     <h3 class="dishotels">AU$190</h3>
+                  </div>
+               </div>
+               </div>
+               <div class="col-md-4">
+               <div class="polaroid">
+                  <a href="hotelPage.php?hotelName=Hotel%20Tepu"> <img src="images/tepu.JPG" alt="5 Terre" ></a>
+                  <div class="container">
+                  <h2 class="dishotels">Hotel Tepu</h2>
+                     <img src="images/star.png" alt="5 Terre" width="100px" >
+                     <hr>
+                     <h3 class="dishotels">AU$240</h3>
+                  </div>
+               </div>
+               </div>
+         </div>
+      </div>
+      
+   </div>
        
-      <div class="explore">
+   <div class="explore">
           
-<h1><b>Explore</b></h1>
+      <h1><b>Explore</b></h1>
           
+      <br>
+
+      <div class="container-fluid">
+         <div class="row">
+               <div class="col-md-4">
+                  <div class="polaroid">
+                     <a href="afterSearch.php"> <img src="images/sydney.JPG" alt="5 Terre" > </a>
+                     <div class="container">
+                        <h2 class="dishotels">Sydney</h2>
+                        <hr>
+                        <h3 class="dishotels">380 Hotels</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="polaroid" >
+                     <a href="afterSearch.php"><img src="images/goldcoast.JPG" alt="5 Terre" ></a>
+                     <div class="container">
+                        <h2 class="dishotels">Gold COast</h2>   
+                        <hr>
+                        <h3 class="dishotels">189 Hotels</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="polaroid">
+                     <a href="afterSearch.php"> <img src="images/canberra.JPG" alt="5 Terre" ></a>
+                     <div class="container">
+                        <h2 class="dishotels">Canberra</h2>
+                        <hr>
+                        <h3 class="dishotels">109 Hotels</h3>
+                     </div>
+                  </div>
+               </div>
+         </div>
+      </div>
           
-           <br>
-   
-        
-        <div class="polaroid" style="position: absolute; left: 500px;">
-            <a href="afterSearch.php"> <img src="images/sydney.JPG" alt="5 Terre" > </a>
-  <div class="container">
-  <h2 class="dishotels">Sydney</h2>
-      <hr>
-      <h3 class="dishotels">380 Hotels</h3>
-  </div>
-</div>
-       
-           <div class="polaroid" style="position: absolute; left: 950px;">
-               <a href="afterSearch.php"><img src="images/goldcoast.JPG" alt="5 Terre" ></a>
-  <div class="container">
-  <h2 class="dishotels">Gold COast</h2>
-    
-      <hr>
-      <h3 class="dishotels">189 Hotels</h3>
-  </div>
-</div>
-        
-        
-           <div class="polaroid">
-  <a href="afterSearch.php"> <img src="images/canberra.JPG" alt="5 Terre" ></a>
-  <div class="container">
-  <h2 class="dishotels">Canberra</h2>
-      <hr>
-      <h3 class="dishotels">109 Hotels</h3>
-  </div>
-</div>
-          
-       
-       </div>
+   </div>
        
     
        

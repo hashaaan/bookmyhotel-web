@@ -14,33 +14,33 @@
         <div class="profileContent admin">
             <div class="personalDetails">
                 <div class="headding">
-                    <h2>Hotels</h2>
+                    <h2>Newly Added</h2>
                 </div>
                 <div class="information">
                     <div class="report">
-                        <h2>Hotel Details</h2>
+                        <h2>Newly Added Details</h2>
                         <table class="reportTable">
                             <thead>
                                 <th>Hotel Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                                 <th>Hotel Name</th>
-                                <th>Street Name</th>
-                                <th>Suburb</th>
-                                <th>City</th>
-                                <th>Postcode</th>
-                                <th>Country</th>
+                                <th>Address</th>
+                                <th>Telephone</th>
+                                <th>Details</th>
                             </thead>
                             <tbody>
                             <?php
-                                    $hotelRecords = $_SESSION["hotelRecords"];
-                                    for ($i=0; $i <count($hotelRecords) ; $i++) { 
+                                    $newlyAddedRecords = $_SESSION["newlyAddedRecords"];
+                                    for ($i=0; $i <count($newlyAddedRecords) ; $i++) { 
                                         echo('<tr>'.
-                                    '<td>'.$hotelRecords[$i]["hotel_id"].'</td>'.
-                                    '<td>'.$hotelRecords[$i]["hotel_name"].'</td>'.
-                                    '<td>'.$hotelRecords[$i]["street_name"].'</td>'.
-                                    '<td>'.$hotelRecords[$i]["suburb"].'</td>'.
-                                    '<td>'.$hotelRecords[$i]["city"].'</td>'.
-                                    '<td>'.$hotelRecords[$i]["postcode"].'</td>'.
-                                    '<td>'.$hotelRecords[$i]["country"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["new_hotel_id"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["firstname"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["lastname"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["hotelname"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["address"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["telephone"].'</td>'.
+                                    '<td>'.$newlyAddedRecords[$i]["subject"].'</td>'.
                                     '</tr>');
                                     }   
                                 ?>
@@ -49,9 +49,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="hotel_table">
-       
         </div>
     </div>
 </body>
