@@ -376,13 +376,16 @@ button {
 }
 
 .text-bg a {
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-size: 14px;
   background-color: #fff;
   color: #000;
   font-weight: 500;
-  padding: 13px 0px;
+  /* padding: 13px 0px; */
+  padding: 4px 0px;
   width: 100%;
-  max-width: 190px;
+  /* max-width: 190px; */
+  max-width: 150px;
   text-align: center;
   display: inline-block;
   transition: ease-in all 0.5s;
