@@ -33,9 +33,10 @@
                             <?php
                                 $hotelName=$_SESSION["hotelName"];
                                 $userName=$_SESSION["userName"];
-                                 $bookingRecords = $_SESSION["bookingRecords"];
-                                for ($i=0; $i <count($bookingRecords) ; $i++) { 
-                                        echo('<tr>'.
+                                $bookingRecords = $_SESSION["bookingRecords"];
+                                $count = count($bookingRecords);
+                                for ($i=0; $i < $count ; $i++) { 
+                                    echo('<tr>'.
                                     '<td>'.$bookingRecords[$i]["booking_id"].'</td>'.
                                     '<td>'.$hotelName[0]["hotel_name"].'</td>'.
                                     '<td>'.$userName[0]["first_name"]." ".$userName[$i]["last_name"].'</td>'.

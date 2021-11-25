@@ -15,31 +15,25 @@ include_once 'header.php';
             ?>
                 <input type="text" name="uid" placeholder="Username / Email" required><br>
                 <input type="password" name="password" placeholder="Password" required><br>
-
-                
                 <button class="loginbutton" type="submit" name="submit">Log In</button>
-                    
-                   
-                
             </form>
         </div>
+        <!--Error handling. -->
+        <?php
+        if (isset($_GET["error"])) {
+            // Error handling for incorrect login details.
+            if ($_GET["error"]== "wronglogin") {
+                echo "<p class='error'>Incorrect login information!</p>";
+            }
+            if ($_GET["error"]== "wrongpassword") {
+                echo "<p class='error'>Incorrect password!</p>";
+            }
+        }
+        ?>
         <div class="links">
             <!-- <a class="fpassword" href="#">Forgotten password?</a> -->
             <p>Don't have an account? <a class="loginlink" href="signup.php">Create a New Acount</p></a>
-        </div>
-
-    <!--Error handling. -->
-    <?php
-    if (isset($_GET["error"])) {
-        // Error handling for incorrect login details.
-        if ($_GET["error"]== "wronglogin") {
-            echo "<p>Incorrect login information!</p>";
-        }
-        if ($_GET["error"]== "wrongpassword") {
-            echo "<p>Incorrect password!</p>";
-        }
-    }
-     ?>  
+        </div> 
     </section>
 </div>
 

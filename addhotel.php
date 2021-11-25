@@ -26,55 +26,44 @@
        
        <br> <br>
        
-       
        <center><h1><b> Add Your Hotel With US</b></h1></center>
-       <div class="container">
-  <form action="hotelconn.php" method= "post">
-    <p style="text-align:left;">First Name</p>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-     <p style="text-align:left;">Last Name</p>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-        <p style="text-align:left;">Your Hotel Name</p>
-    <input type="text" id="lname" name="hotelname" placeholder="Your Hotel Name..">
+   <div class="addhotel_form">
+      <div class="container">
+         <form action="hotelconn.php" method= "post">
+            <p style="text-align:left;">First Name</p>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-      
-        <p style="text-align:left;">Your Hotel Address</p>
-    <input type="text" id="lname" name="address" placeholder="Your Hotel Address..">
-      
-        <p style="text-align:left;">Telephone Number</p>
-    <input type="text" id="lname" name="telephone" placeholder="Telephone Number..">
-      
+            <p style="text-align:left;">Last Name</p>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+               
+            <p style="text-align:left;">Your Hotel Name</p>
+            <input type="text" id="lname" name="hotelname" placeholder="Your Hotel Name..">
+            
+            <p style="text-align:left;">Your Hotel Address</p>
+            <input type="text" id="lname" name="address" placeholder="Your Hotel Address..">
+               
+            <p style="text-align:left;">Telephone Number</p>
+            <input type="text" id="lname" name="telephone" placeholder="Telephone Number..">
+               
+            <p style="text-align:left;">Details About Your Hotel</p>
+            <input type="text" id="subject" name="subject" placeholder="More Details..">
 
-      <p style="text-align:left;">Details About Your Hotel</p>
-<!--    <textarea id="subject" name="subject" placeholder="Write your hotel details.." style="height:200px"></textarea>-->
-      
-       <input type="text" id="subject" name="subject" placeholder="More Details..">
-      
-      
+            <center><p style="text-align:left;">Add some of your hotel images</p></center>
+            <input type="file" name"image">
 
-      <center><p style="text-align:left;">Add some of your hotel images</p></center>
-      <input type="file" name"image">
-
-      
-      <br><br><br>
-<input type="submit" value="Submit">
-       <br>
-  </form>
-</div>
-           
-      
-       
+            <br><br><br>
+            <input type="submit" value="Submit">
+            <br>
+         </form>
+      </div>
+   </div>
     
        <footer id="contact">
          <div class="footer">
      
             <div class="copyright">
-               
-                
-                
-                
+
                 <div class="explore2">
                     
                     <ul type="none" style="text-align: left;">

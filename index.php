@@ -9,7 +9,7 @@
                <div class="col-md-12">
                   <div class="text-bg">
                      <div class="padding_lert">
-                        <h1>WELCOME TO BOOK MY HOTEL </h1>
+                        <h1>WELCOME TO BOOK MY HOTEL</h1>
                         
                         <p></p>
                         <a href="addhotel.php">Add Your Hotels</a>
@@ -25,22 +25,26 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <form class="form_book">
+                  <form class="form_book" action="includes/search.inc.php" method="POST">
                      <div class="row">
                         <div class="col-md-3">
-                           <label class="date">ARRIVAL DATE</label>
-                           <input class="book_n"  type="date" >
+                           <label class="date">Suburb</label>
+                           <input class="book_n" name="location" id="location" placeholder="Enter Suburb" type="text" />
                         </div>
                         <div class="col-md-3">
-                           <label class="date">DEPARTURE DATE</label>
-                           <input class="book_n"  type="date" >
+                           <label class="date">CHECKIN</label>
+                           <input class="book_n" name="checkInDate" id="checkin"  type="date" />
                         </div>
                         <div class="col-md-3">
-                           <label class="date">PERSON</label>
-                           <input class="book_n" placeholder="2" type="type" name="2">
+                           <label class="date">CHECKOUT</label>
+                           <input class="book_n" name="checkOutDate" id="checkout" type="date" />
                         </div>
-                        <div class="col-md-3">
-                           <button class="book_btn">Book Now</button>
+                        <div class="col-md-1">
+                           <label class="date">GUESTS</label>
+                           <input class="book_n" name="numberOfGuests" id="guests" placeholder="0" type="text" />
+                        </div>
+                        <div class="col-md-2">
+                           <button class="book_btn" type="submit" name ="submit_index">Search</button>
                         </div>
                      </div>
                   </form>
@@ -52,32 +56,36 @@
        
        <br>
        
-       <center>
-       <div class=figure>
-           <p><a href="afterSearch.php"><img src="images/pic1.jpg"
-    width="300" height="300"
-                                                                          alt="Eiffel tower"></a></p>
-           <h2><b>City View</b></h2>
-          
-           <p><b>9,385 Hotel</b></p>
-</div>
+      <center>
+      <div class=figure>
+         <a href="includes/categories.inc.php?category=City View">
+         <p>            
+            <img src="images/pic1.jpg" width="300" height="300" alt="Eiffel tower" />
+         </p>
+         <h2><b>City View</b></h2>
+         <p><b>9,385 Hotel</b></p>
+         </a>
+      </div>
        
-         <div class=figure>
-  <p><a href="afterSearch.php"><img src="images/pic2.jpg"
-    width="300" height="300"
-    alt="Eiffel tower">
-             </a></p>
-             <h2><b>Beach Side</b></h2>
-             <p><b>12,345 Hotel</b></p>
-</div>
+      <div class=figure>
+         <p>
+            <a href="includes/categories.inc.php?category=Beachside">
+               <img src="images/pic2.jpg" width="300" height="300" alt="Eiffel tower">
+             </a>
+         </p>
+         <h2><b>Beach Side</b></h2>
+         <p><b>12,345 Hotel</b></p>
+      </div>
        
-              <div class=figure>
-  <p><a href="afterSearch.php"><img src="images/pic3.jpg"
-   width="300" height="300"
-          alt="Eiffel tower"></a></p>
-  <h2><b>Cottage</b></h2>
-                  <p><b>11,678 Hotel</b></p>
-</div>
+      <div class=figure>
+         <p>
+            <a href="includes/categories.inc.php?category=Cottage">
+               <img src="images/pic3.jpg" width="300" height="300" alt="Eiffel tower">
+            </a>
+         </p>
+         <h2><b>Cottage</b></h2>
+         <p><b>11,678 Hotel</b></p>
+      </div>
            
        </center>
        
@@ -159,32 +167,38 @@
          <div class="row">
                <div class="col-md-4">
                   <div class="polaroid">
-                     <a href="afterSearch.php"> <img src="images/sydney.JPG" alt="5 Terre" > </a>
-                     <div class="container">
-                        <h2 class="dishotels">Sydney</h2>
-                        <hr>
-                        <h3 class="dishotels">380 Hotels</h3>
-                     </div>
+                     <a href="includes/explore.inc.php?city=Sydney">
+                     <img src="images/sydney.JPG" alt="5 Terre" > 
+                        <div class="container">
+                           <h2 class="dishotels">Sydney</h2>
+                           <hr>
+                           <h3 class="dishotels">380 Hotels</h3>
+                        </div>
+                     </a>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="polaroid" >
-                     <a href="afterSearch.php"><img src="images/goldcoast.JPG" alt="5 Terre" ></a>
-                     <div class="container">
-                        <h2 class="dishotels">Gold COast</h2>   
-                        <hr>
-                        <h3 class="dishotels">189 Hotels</h3>
-                     </div>
+                     <a href="includes/explore.inc.php?city=Gold Coast">
+                        <img src="images/goldcoast.JPG" alt="5 Terre" >
+                        <div class="container">
+                           <h2 class="dishotels">Gold COast</h2>   
+                           <hr>
+                           <h3 class="dishotels">189 Hotels</h3>
+                        </div>
+                     </a>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="polaroid">
-                     <a href="afterSearch.php"> <img src="images/canberra.JPG" alt="5 Terre" ></a>
-                     <div class="container">
-                        <h2 class="dishotels">Canberra</h2>
-                        <hr>
-                        <h3 class="dishotels">109 Hotels</h3>
-                     </div>
+                     <a href="includes/explore.inc.php?city=Canberra">
+                        <img src="images/canberra.JPG" alt="5 Terre" >
+                        <div class="container">
+                           <h2 class="dishotels">Canberra</h2>
+                           <hr>
+                           <h3 class="dishotels">109 Hotels</h3>
+                        </div>
+                     </a>
                   </div>
                </div>
          </div>
@@ -209,22 +223,22 @@
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <form id="request" class="main_form">
+                     <form class="main_form" action="includes/contactBox.inc.php" method="POST">
                         <div class="row">
                            <div class="col-md-12 ">
-                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                              <input class="contactus" id="name" placeholder="Full Name" type="type" name="name" /> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                              <input class="contactus" id="subject" placeholder="Subject" type="type" name="subject" /> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                              <input class="contactus" id="email" placeholder="Email" type="type" name="email">                          
                            </div>
                            <div class="col-md-12">
-                              <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                              <textarea class="textarea" placeholder="Message" type="type" name="message"></textarea>
                            </div>
                            <div class="col-sm-12">
-                              <button class="send_btn">Send</button>
+                              <button class="send_btn" type="submit" name="submit">Send</button>
                            </div>
                         </div>
                      </form>
@@ -248,18 +262,18 @@
                     </ul>
                 
                     
-                  <ul type="none" style="text-align: left; position: absolute; left:200px; top:3825px;">
-                    
-                    <li></li>
+                  <ul type="none" style="text-align: left; position: absolute; left:200px; top:3950px;">
                         <li><h2><a href="#">About Us</a></h2></li>
                          <li><h2><a href="#"> Contact Us</a> </h2></li>
                         <li><h2>  <a href="#"> FAQ</a></h2></li>
                         <li><h2> <a href="#">  Privacy Policy</a></h2></li>
-                    </ul>
+                  </ul>
                 
                 </div>
                 
-                <a href="index.php">    <img src="images/logo2.png" width="400px;"  style="position: absolute; right:50px; top:3850px;"> </a>
+                <a href="index.php">
+                   <img src="images/logo2.png" width="400px;"  style="position: absolute; right:50px; top:3950px;">
+               </a>
                 
             <hr>
                <div class="container">
